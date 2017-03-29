@@ -23,9 +23,9 @@ Time-LSTM proposed in the paper has three different architectures.
 
 ## Requirments
 
-theano>=0.8.2
-lasagne>=0.2.dev1
-pandas>=0.18.1
+theano>=0.8.2  
+lasagne>=0.2.dev1  
+pandas>=0.18.1  
 
 ```bash
 pip install Theano
@@ -35,7 +35,7 @@ pip install pandas
 
 ## Data Preprocess
 
-* [Last.FM](http://www.citeulike.org/faq/data.adp): tools/lastfm.py  
+* [Last.FM](http://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html): tools/lastfm.py  
 * [CiteULike](http://www.citeulike.org/faq/data.adp): tools/citeulike.py
 
 Download and put the original data file into _data/music_ or _data/citeulike_. Using the script(lastfm.py or citeulike.py. Modify the path or move them to the root directory before using) to do preprocess. There will be 6 files generated for each.
