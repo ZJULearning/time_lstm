@@ -35,10 +35,10 @@ pip install pandas
 
 ## Data Preprocess
 
-* [Last.FM](http://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html): tools/lastfm.py  
-* [CiteULike](http://www.citeulike.org/faq/data.adp): tools/citeulike.py
+* [Last.FM](http://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html):   
+* [CiteULike](http://www.citeulike.org/faq/data.adp):  
 
-Download and put the original data file into _data/music_ or _data/citeulike_. Using the script(lastfm.py or citeulike.py. Modify the path or move them to the root directory before using) to do preprocess. There will be 6 files generated for each.
+Download and put the original data file into _data/music_ or _data/citeulike_.  Preprocess the data into the following format. There should be 6 files generated for each(in data/{data_source}/).
 
 * tr(te)-user-item.lst
 * tr(te)-user-item-delta-time.lst
@@ -51,14 +51,13 @@ user2, item1 item2 item3 ...
 
 ## Files
 
-plstm.py: phased-lstm
-tlstm1.py: TLSTM1
-tlstm2.py: TLSTM2
-tlstm3.py: TLSTM3
-lstm.py: LSTM
-utils.py: load data, save module, and some other method...
-main.py: main process to train.
-tools/*.py: preprocess scripts.
+plstm.py: phased-lstm  
+tlstm1.py: TLSTM1  
+tlstm2.py: TLSTM2  
+tlstm3.py: TLSTM3  
+lstm.py: LSTM  
+utils.py: load data, save module, and some other method...  
+main.py: main process to train.  
 
 train.sh: command samples.
 
