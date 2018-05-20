@@ -36,7 +36,7 @@ pip install pandas
 ## Data Preprocess
 
 * [Last.FM](http://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html):   
-* [CiteULike](http://www.citeulike.org/faq/data.adp):  
+* [CiteULike](description: http://www.citeulike.org/faq/data.adp; download: https://pan.baidu.com/s/1ej4C4UBiAsRJqWheI5LEgw): 
 
 Download and put the original data file into _data/music_ or _data/citeulike_.  Preprocess the data into the following format. There should be 6 files generated for each(in data/{data_source}/).
 
