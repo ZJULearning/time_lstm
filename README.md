@@ -23,28 +23,33 @@ Time-LSTM proposed in the paper has three different architectures.
 
 ## Requirments
 
-theano>=0.8.2  
-lasagne>=0.2.dev1  
-pandas>=0.18.1  
+The code is tested in the following envirenment.  
+theano=0.9.0  
+lasagne=0.2.dev1  
+pandas=0.18.1  
+cuDDN=5.1  
+CUDA=8.0  
 
 ```bash
-pip install Theano
+pip install -v theano==0.9.0
 pip install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
-pip install pandas
+pip install -v pandas==0.18.1
 ```
 
 ## Data Preprocess
 
-* [Last.FM](http://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html):   
-* [CiteULike](description: http://www.citeulike.org/faq/data.adp; download: https://pan.baidu.com/s/1ej4C4UBiAsRJqWheI5LEgw): 
+* [Last.FM](description&download: http://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html):   
+* [CiteULike](description: http://www.citeulike.org/faq/data.adp; download: https://pan.baidu.com/s/1ej4C4UBiAsRJqWheI5LEgw):   
 
-Download and put the original data file into _data/music_ or _data/citeulike_.  Preprocess the data into the following format. There should be 6 files generated for each(in data/{data_source}/).
+Download and put the original data file into _data/music_ or _data/citeulike_.  
+Run the python file in the preprocess folder (e.g. _lastfm.py_) to get three files: _user-item.lst, user-item-delta-time.lst_ and _user-item-accumulate-time.lst_.  
+Use head/tail command (e.g. _head -800 user-item.lst > tr\_user-item.lst_ and _tail -192 user-item.lst > te\_user-item.lst_) to generate the following 6 files for each(in data/{data_source}/).  
 
-* tr(te)-user-item.lst
-* tr(te)-user-item-delta-time.lst
-* tr(te)-user-item-accumulate-time.lst
+* tr(te)\_user-item.lst
+* tr(te)\_user-item-delta-time.lst
+* tr(te)\_user-item-accumulate-time.lst
 
-_tr-*_ is traing data. _te-*_ is testing data. The content is something like: 
+_tr\_*_ is traing data. _te\_*_ is testing data. The content is something like: 
 
 >user1, item1 item2 item3 ...  
 user2, item1 item2 item3 ...  
