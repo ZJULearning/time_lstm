@@ -6,7 +6,7 @@ import os
 BASE_DIR = 'data'
 DATA_SOURCE = 'music'
 
-path = os.path.join(BASE_DIR, DATA_SOURCE,'record_filtered.tsv')
+path = os.path.join(BASE_DIR, DATA_SOURCE,'userid-timestamp-artid-artname-traid-traname.tsv')
 user_item_record = os.path.join(BASE_DIR, DATA_SOURCE, 'user-item.lst')
 user_item_delta_time_record = os.path.join(BASE_DIR, DATA_SOURCE, 'user-item-delta-time.lst')
 user_item_accumulate_time_record = os.path.join(BASE_DIR, DATA_SOURCE, 'user-item-accumulate-time.lst')
