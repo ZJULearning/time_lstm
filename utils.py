@@ -17,7 +17,7 @@ from lasagne import init
 from lasagne.layers.base import Layer
 from lasagne.random import get_rng
 
-BASE_DIR = 'data'
+BASE_DIR = 'preprocess/data'
 USER_RECORD_PATH = 'user-item.lst'
 DELTA_TIME_PATH = 'user-item-delta-time.lst'
 ACC_TIME_PATH = 'user-item-accumulate-time.lst'
