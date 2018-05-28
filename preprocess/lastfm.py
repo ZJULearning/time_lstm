@@ -1,4 +1,4 @@
-from __future__ import print_function
+rom __future__ import print_function
 import pandas as pd
 import pickle
 import os
@@ -15,8 +15,9 @@ item2index_path = os.path.join(BASE_DIR, DATA_SOURCE, 'item2index')
 
 
 def generate_data():
-    out = open(user_item_accumulate_time_record, 'w')
-    # out = open(user_music_record, 'w')
+    out_ui = open(user_item_record, 'w')
+    out_uidt = open(user_item_delta_time_record, 'w')
+    out_uiat = open(user_item_accumulate_time_record, 'w')
 
 
     data = pd.read_csv(path, sep='\t',
@@ -52,7 +53,7 @@ def generate_data():
         # user_data = user_data[user['tranname'].notnull()]
         music_seq = user_data['tranname']
         time_seq = user_data['timestamp']
-        # filter the null data. 
+        # filter the null data.
         music_seq = music_seq[music_seq.notnull()]
         time_seq = time_seq[time_seq.notnull()]
         # calculate the difference between adjacent items. -1 means using t[i] = t[i] - t[i+1]
@@ -65,12 +66,16 @@ def generate_data():
         for delta in delta_time[:-1]:
             next_time = time_accumulate[-1] + delta
             time_accumulate.append(next_time)
-        # out.write(userid + ',')
-        # out.write(' '.join(str(x) for x in delta_time) + '\n')
-        out.write(userid + ',')
-        out.write(' '.join(str(x) for x in time_accumulate) + '\n')
+        out_ui.write(userid + ',')
+        out_ui.write(' '.join(str(x) for x in item_seq) + '\n')
+        out_uidt.write(userid + ',')
+        out_uidt.write(' '.join(str(x) for x in delta_time) + '\n')
+        out_uiat.write(userid + ',')
+        out_uiat.write(' '.join(str(x) for x in time_accumulate) + '\n')
 
-    out.close()
+    out_ui.close()
+    out_uidt.close()
+    out_uiat.close()
 
 if __name__ == '__main__':
     generate_data()
