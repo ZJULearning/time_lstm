@@ -74,7 +74,7 @@ To train the model, run:
 ```bash
 THEANO_FLAGS="${FLAGS}" python main.py --model TLSTM3   --data ${DATA} --batch_size ${BATCH} --vocab_size ${VOCAB} --max_len ${MLEN} --fixed_epochs ${FIXED_EPOCHS} --num_epochs ${NUM_EPOCHS} --num_hidden ${NHIDDEN} --test_batch ${TEST_BATCH} --learning_rate ${LEARNING_RATE} --sample_time ${SAMPLE_TIME}
 ```
-or just run (the hyperparameters in train.sh are not carefully tuned):
+or just run (the hyperparameters in _train.sh_ are not carefully tuned):
 
 ```bash
 bash train.sh
