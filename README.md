@@ -42,7 +42,7 @@ pip install -v pandas==0.18.1
 * [CiteULike](description: http://www.citeulike.org/faq/data.adp; download: https://pan.baidu.com/s/1ej4C4UBiAsRJqWheI5LEgw):   
 
 Download and put the original data file into _data/music_ or _data/citeulike_.  
-For the _citeulike_ dataset, you need run _awk -F "|" '{print $1"|"$2"|"$3}' citeulike_dataset | uniq > citeulike-origin-filtered_ to get _citeulike-origin-filtered_.
+For the _citeulike_ dataset, you need run _awk -F "|" '{print $1"|"$2"|"$3}' citeulike_dataset | uniq > citeulike-origin-filtered_ to get _citeulike-origin-filtered_.  
 Run the python file in the preprocess folder (e.g. _lastfm.py_) to get three files: _user-item.lst, user-item-delta-time.lst_ and _user-item-accumulate-time.lst_.  
 Use head/tail command (e.g. _head -800 user-item.lst > tr\_user-item.lst_ and _tail -192 user-item.lst > te\_user-item.lst_) to generate the following 6 files for each(in data/{data_source}/).  
 
