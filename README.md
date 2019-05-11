@@ -38,7 +38,7 @@ pip install -v pandas==0.18.1
 
 ## Data Preprocess
 
-* [Last.FM](download: https://pan.baidu.com/s/1z-rAnxH76BgVgKDBEhFKnQ, extract code: x88i):   
+* [Last.FM](description&download: https://www.dtic.upf.edu/~ocelma/MusicRecommendationDataset/lastfm-1K.html):   
 * [CiteULike](description: http://www.citeulike.org/faq/data.adp; download: https://pan.baidu.com/s/1ej4C4UBiAsRJqWheI5LEgw):   
 
 Download and put the original data file into _data/music_ or _data/citeulike_.  
